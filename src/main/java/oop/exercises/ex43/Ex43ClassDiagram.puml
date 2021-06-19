@@ -1,0 +1,30 @@
+@startuml
+class NameList {
+    +String siteName
+    +String author
+    +String jsCheck
+    +String cssCheck
+    +String pathway
+    +boolean success
+
+    +SiteGen()
+    +getSiteName(String holder)
+    +getAuthor(String holder)
+    +getjsCheck(String holder)
+    +getcssCheck(String holder)
+
+    +generateSite()
+    +writeInSite()
+    +printWebGen()
+}
+
+class Application {
+
+
+  +String given
+  +Scanner inputs
+  +SiteGen newSite
+  +print operations
+}
+
+@enduml

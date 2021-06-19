@@ -5,7 +5,7 @@ autonumber
 
 Application -> NameList: Read name and add to NameList Array List
 Application -> NameList: Activate print function
-NameList <- Application: Sends copy of list through a function
+NameList -> Application: Sends copy of list through a function
 
 
 @enduml

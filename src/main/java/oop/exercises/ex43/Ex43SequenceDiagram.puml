@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Application -> NameList: Send read information to NameList class
+
+
+
+
+NameList -> Operations: Generate folders in directory
+NameList -> Operations: Check and potentially produce js and css file
+
+Operations -> Output: Output Success
+
+
+@enduml
