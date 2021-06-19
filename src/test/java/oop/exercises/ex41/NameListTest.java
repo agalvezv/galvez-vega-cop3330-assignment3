@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 public class NameListTest extends TestCase {
 
-    public void testAddToList() {
+    public void test_AddToList() {
         NameList names = new NameList();
 
         names.addToList("Potato");
