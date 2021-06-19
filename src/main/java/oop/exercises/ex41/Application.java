@@ -36,6 +36,5 @@ public class Application {
         //newList.printList();
         names = newList.printList();
 
-
     }
 }
