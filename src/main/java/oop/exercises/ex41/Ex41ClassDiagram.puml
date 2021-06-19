@@ -1,0 +1,18 @@
+@startuml
+class NameList {
+  -ArrayList names
+
+  +void addToList()
+  +ArrayList printList()
+}
+
+class Application {
+
+
+  +File fileOpener
+  +Scanner myReader
+  +try catch container
+  +loop to read through files
+}
+
+@enduml
