@@ -3,7 +3,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+//Most of my pseudocode was written on a piece of paper for these assignments
+//they are transferred into the comments in the code
 public class Application {
 
 //Main will be the main area to access all possible class objects
