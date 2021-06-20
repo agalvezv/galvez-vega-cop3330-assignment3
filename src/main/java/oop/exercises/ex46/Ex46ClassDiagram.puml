@@ -1,0 +1,23 @@
+@startuml
+class Product {
+
+
+    +String readFile
+    +ArrayList readFileAL
+    +ArrayList nameFinal
+    +ArrayList countFinal
+
+
+    +readFile()
+    +formatString()
+    +wordCount()
+    +printList()
+}
+
+class Application {
+
+    +FileManagement Object
+  +everything activated using the FM Object
+}
+
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Application -> FileManagementObject: FileManagement Object is made.
+Application -> FileManagementObject: Function activated to read input file
+FileManagementObject -> ReadFile: Attempts are made to read file
+FileManagementObject <- ReadFile: An exception is caught and things fail then and there.
+
+Application -> FileManagementObject: Function makes a string from the read file and formats it
+Application -> FileManagementObject: this will be used for the word counter function
+
+Application -> FileManagementObject: The next function adds every word into an array list
+Application -> FileManagementObject: The count of each word is added to an array list
+
+FileManagementObject -> Output: Function is used to output the array lists produced
+
+
+@enduml
