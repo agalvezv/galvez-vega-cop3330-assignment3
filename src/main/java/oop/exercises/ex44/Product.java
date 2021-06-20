@@ -1,7 +1,9 @@
 package oop.exercises.ex44;
 
 public class Product {
-
+//This is my product
+    //The json will copy info into an object, this class is my blueprint
+    //i have the name, price and quantity all listed as needed.
     public String name;
     public double price;
     public int quantity;

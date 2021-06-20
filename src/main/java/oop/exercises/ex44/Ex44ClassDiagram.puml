@@ -1,0 +1,29 @@
+@startuml
+class Product {
+
+    +String name
+    +double price
+    +int quantity
+
+    +setName(String name)
+    +getName()
+    +setPrice(Double price)
+    +getPrice()
+    +setPrice(String quantity)
+    +getPrice()
+}
+
+class Application {
+
+
+    +String name
+    +double price
+    +int quantity
+    +int counter = 0;
+    +ArrayList products
+
+
+  +trycatch, loop operations
+}
+
+@enduml

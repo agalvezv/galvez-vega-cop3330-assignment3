@@ -12,21 +12,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static java.lang.System.out;
+
 
 public class Application {
     static Scanner inputs = new Scanner(System.in);
 
 
     public static void main(String[] args) {
-        //String names[] = new String[10];
+        //Holders for the future pieces of the object
         String name = "";
-        //double prices[] = new double[10];
+
         double price=0.00;
-        //int quantities[] = new int[10];
+
         int quantity=0;
         int counter = 0;
+        //array list created to contain objects
         List<Product> products = new ArrayList<Product>();
+
+        //parse through the json and get necessary info
         File input = new File("src/main/java/oop/exercises/ex44/exercise44_input.json");
         try {
             JsonElement fileElement = JsonParser.parseReader(new FileReader(input));
@@ -37,21 +40,14 @@ public class Application {
 
             for(JsonElement productelement : jsonArrayofProducts)
             {
-
-                System.out.println(counter);
+                //turn json object array into a array list of object orientation
+                //System.out.println(counter);
                 JsonObject productJsonObject = productelement.getAsJsonObject();
-                //names[counter] = productJsonObject.get("name").getAsString();
+
                 name= productJsonObject.get("name").getAsString();
                 price = productJsonObject.get("price").getAsDouble();
                 quantity = productJsonObject.get("quantity").getAsInt();
-                //prices[counter] = productJsonObject.get("price").getAsDouble();
-                //quantities[counter] = productJsonObject.get("quantity").getAsInt();
-                //System.out.println(name);
-                //Product product = new Product(names[counter], price, quantity);
-                //out.println(product.name);
-                //out.println(product.price);
-                //out.println(product.quantity);
-                //products.add(product);
+
                 products.add(new Product(name,price,quantity));
                 counter++;
 
@@ -59,9 +55,12 @@ public class Application {
 
 
         } catch (FileNotFoundException e) {
+            //failure
             e.printStackTrace();
         }
-
+        //loop takes in a name from the user
+        //if it isn't found it restarts
+        //if it is found it will print out the appropriate part of the list.
 
         String response="";
         boolean searchCheck = false;
@@ -76,8 +75,11 @@ public class Application {
             {
                 if(products.get(i).name.equals(response))
                 {
-                    System.out.println(products.get(i).price);
-                    System.out.println(products.get(i).quantity);
+
+                    //System.out.println(products.get(i).price);
+                    System.out.println("Name: " + products.get(i).name);
+                    System.out.printf("Price: %.2f\n", products.get(i).price);
+                    System.out.println("Quantity: " + products.get(i).quantity);
 
                     searchCheck=true;
                 }

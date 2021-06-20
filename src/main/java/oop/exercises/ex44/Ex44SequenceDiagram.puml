@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+fileElement -> JsonObject: Trying to read JsonObject
+fileElement <- JsonObject: Failure. Exception returned.
+
+JsonObject -> ArrayList: A list of product objects are created
+JsonObject -> ArrayList: each carrying a name, price and quantity
+
+ArrayList -> Output: Prints and object that is found using loop
+ArrayList <- Output: Forces user to enter again if object not found
+ArrayList <- Output: for continued searching through list
+
+
+@enduml
