@@ -1,0 +1,30 @@
+@startuml
+class Product {
+
+
+    +String response
+    +String wordChange
+    +String newWord
+
+    +String readFile
+    +String outputFile
+    +ArrayList readFileAL
+
+
+    +readFile()
+    +formatString()
+    +writeFile()
+}
+
+class Application {
+
+
+    +Scanner inputs
+    +String response
+    +String wordChange
+    +String newWord
+    +FileManagement Object
+  +everything activated using the FM Object
+}
+
+@enduml

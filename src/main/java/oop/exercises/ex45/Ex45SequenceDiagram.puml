@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+User -> Application: Read in output text name
+Application -> FileManagementObject: application strings sent through constructor
+Application -> FileManagementObject: Function to read file
+FileManagementObject -> ReadFile: Attempts are made to read file
+FileManagementObject <- ReadFile: An exception is caught and things fail then and there.
+
+Application -> FileManagementObject: Function makes a string from the read file and formats it
+Application -> FileManagementObject: in the way that is required for the output string
+
+FileManagementObject -> OutputFile: Function to write a new text file activated
+FileManagementObject -> OutputFile: A new file is created
+FileManagementObject <- OutputFile: Or an error is caught and an error message is printed.
+
+@enduml
