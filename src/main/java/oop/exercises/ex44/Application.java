@@ -69,7 +69,7 @@ public class Application {
         {
             System.out.println("What is the product name?");
             response=inputs.nextLine();
-            System.out.println(response);
+            //System.out.println(response);
 
             for(int i=0; i<products.size();i++)
             {
